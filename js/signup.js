@@ -1,20 +1,8 @@
-const name = document.getElementById("name");
+const userName = document.getElementById("name");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const togglePassword = document.getElementById("eyeicon");
 const signUp = document.getElementById("signup");
-
-// function myFunction() {
-//     let x =
-//     document.getElementById("password");
-//     if (x.type === "password") {
-//         x.type = "text";
-//     }
-//     else {
-//         x.type = "password"
-//     }
-// }
-
 
 togglePassword.addEventListener('click', function () {
     const type = password.getAttribute("type") === "password" ? "text" : "password";
@@ -28,21 +16,26 @@ password.addEventListener('input', changeButtonColor);
 
 function iconDisplay() {
     if (!(onfocus)) {
-        togglePassword.classList.add("icon-display");
+        // togglePassword.classList.add("icon-display");
     }
 }
 
 email.addEventListener('input', changeButtonColor);
-name.addEventListener('input', changeButtonColor);
+userName.addEventListener('input', changeButtonColor);
 
 function changeButtonColor() {
     signUp.classList.add("button-active-color")
 }
 
-$('a[id="signup"]').click(function() {
-    if($('input[type="password"]').val().length < 8) {
-        alert('Minimum length = "eight"');
+
+signUp.addEventListener('click', signupSuccess);
+
+function signupSuccess(e) {
+    e.preventDefault();
+
+    if (email.value && password.value && userName.value) {
+        window.location.id = '#staticBackdrop';
     } else {
-        $('form').submit();
+        alert("All inputs must be filled and password must be at least 8 letters!");
     }
-});
+}

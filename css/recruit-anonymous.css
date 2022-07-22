@@ -1,7 +1,4 @@
 /*Anonymous*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -67,6 +64,26 @@
 }
 .select-button{
     border:1px solid rgba(85,85,85,1)!important;
+}
+.card-img-top{
+    width: 67%;  
+}
+.R-bg-primary, .R-btn-primary{
+    background: rgba(39, 118, 234, 1);
+    color: #fff;
+
+}
+
+.R-btn-primary:hover {
+    color: #fff;
+    background: rgb(10, 89, 207);
+}
+
+.R-text-primary{
+    color: rgba(39, 118, 234, 1);
+}
+.card-text{
+    font-size: 14px!important;
 }
 @media (max-width: 768px) {
     .carrd{

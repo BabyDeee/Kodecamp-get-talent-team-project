@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/header-footer-anonymous-user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top">
           <div class="container">
             <a class="navbar-brand me-5 pe-5" href="index.html"><img src="img/anonymous-user-header-logo.png" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +44,7 @@
                   <a class="nav-link ms-lg-2 active" aria-current="page" href="blog.html">Blog</a>
                 </li>
               </ul>
-              <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 border-top">
                   <li class="nav-item me-lg-3">
                       <a  href="signup.html" class="btn btn-outline-blue fw-bold px-0">Sign Up</a>
                   </li>
@@ -53,7 +56,7 @@
           </div>
         </nav>
     </header>
-    <section id="hero-section">
+    <section id="hero-section" class="mt-5">
       <div class="image-section">
         <h2 class="fw-bold display-5 text-white d-flex justify-content-center align-items-center" style="height: 50vh;">Our Blog</h2>
       </div>
@@ -457,9 +460,6 @@
                                   <a class="text-decoration-none link-secondary" href="index.html">Home</a>
                               </li>
                               <li class="mb-4">
-                                  <a class="text-decoration-none link-secondary" href="sign-in.html">Profile</a>
-                              </li>
-                              <li class="mb-4">
                                   <a class="text-decoration-none link-secondary" href="about-us-anonymous-user.html">About Us</a>
                               </li>
                               <li class="mb-4">
@@ -484,7 +484,9 @@
                   </div>
               </div>
               <div class="col-lg-4 col-md-4 col-12">
-                  <p class="fw-bold text-light">CONTACT US</p>
+                <div class="mb-3">
+                  <a href="contact-page.html" class="fw-bold text-decoration-none link-light">CONTACT US</a>
+                </div>
                   <ul class="list-unstyled fs-14">
                       <li>
                           <div class="d-flex text-secondary">
@@ -532,7 +534,7 @@
             clickable: true,
           },
           autoplay: {
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: false,
           },
           loop: true,

@@ -18,17 +18,25 @@ body{font-family: 'Inter', sans-serif;}
 .form-color{
     background-color: #F5F5F5;
 }
-.img2 {
+/* .img2 {
     height: 28vh;
-}
+} */
 .profile-info{
     color: #555555;
 }
-.img1 {
+/* .img1 {
     top: 30%;
     height: 35vh;
+} */
+.blue {
+    color: rgba(39, 118, 234, 1);
 }
-.btn a{
+
+.blue:hover {
+    color: #fff;
+    background-color: rgba(39, 118, 234, 0.8);
+}
+.btn a, .btn-up-save{
     width: 40% !important;
 } 
 @media (max-width: 992px) {

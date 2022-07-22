@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top">
             <div class="container">
               <a class="navbar-brand me-5 pe-5" aria-current="page" href="home.html"><img src="img/pp-logo.png" alt="Logo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,72 +44,83 @@
                     <li class="nav-item">
                       <a class="nav-link me-lg-2" href="message.html">Message<i class="bi bi-chat-text-fill text-white ms-2"></i></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <a class="nav-link me-lg-2" href="#">Notification<i class="bi bi-bell-fill text-white ms-2"></i></a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link me-lg-2 position-relative" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notification<i class="bi bi-bell-fill text-white ms-2"></i><span class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-danger rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                          </span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item blue" href="message.html"><i class="bi bi-chat-text-fill me-3"></i>You have 2 new messages</a></li>
+                          <li><a class="dropdown-item blue" href="recruit.html"><i class="bi bi-person me-3"></i>3 new recruits was added</a></li>
+                          <li><hr class="dropdown-divider blue"></li>
+                          <li><a class="dropdown-item blue" href="blog-login.html"><i class="bi bi-type-bold me-3"></i>New blog updates</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active me-lg-2" href="profile-page.html">Profile<i class="bi bi-person-circle text-white ms-2"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="sign-in.html">Logout<i class="bi bi-box-arrow-right text-white ms-2"></i></a>
+                      <a class="nav-link" href="index.html">Logout<i class="bi bi-box-arrow-right text-white ms-2"></i></a>
                     </li>
                 </ul>
               </div>
             </div>
           </nav>
     </header>
-    <div class="recruiter-info container py-5">
+    <div class="recruiter-info container py-5 mt-5">
         <div class="row">
             <div class="col-12">
                 <h2 class="fs-1 pt fw-bold ps-3" style="border-left: 10px solid #2776EA;">Edit Information</h2>
                 <hr class="pt-1">
                 <p>Tell us about you. This information will not be shown to recruiters</p>
                 <div style="height: 100px; background: #6FA4F1;" class="rounded images position-relative mb-5">
-                    <img src="img/pp-circle.png" class="position-absolute img1 start-50 translate-middle-x img-fluid" alt="">
-                    <img src="img/pp-man.png" class="position-absolute top-50 img2 start-50 translate-middle-x img-fluid" alt="picture">
+                    <img src="img/pp-white-gp.png" class="img-fluid position-absolute top-50 start-50 translate-middle-x" style="height: 200px;" alt="Man">
                 </div>
             </div>
         </div>
     </div>
-    <div class="form container profile-info w-50 py-5">
+    <div class="form container profile-info w-50 mt-5 pt-lg-5 pt-md-5 pt-4">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label fw-bold">Name</label>
-            <input type="text" class="form-control border-0 form-color" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control border-0 form-color" id="recruiter-name-input" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label fw-bold">Company</label>
-            <input type="text" class="form-control border-0 form-color" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control border-0 form-color" id="recruiter-company-input" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label fw-bold">Type of company (e.g Fintech, E-Commerce)</label>
-            <input type="text" class="form-control border-0 form-color" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control border-0 form-color" id="recruiter-type-input" placeholder="">
         </div>
         <div class="mb-3 ">
             <label for="exampleFormControlInput1" class="form-label fw-bold">Company Size</label>
-            <input type="text" class="form-control border-0 form-color" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control border-0 form-color" id="recruiter-size-input" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label fw-bold">Salary Range</label>
-            <input type="text" class="form-control border-0 form-color" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control border-0 form-color" id="recruiter-salary-input" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label fw-bold">Location</label>
-            <input type="text" class="form-control border-0 form-color" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control border-0 form-color" id="recruiter-location-input" placeholder="">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label fw-bold">About the company</label>
-            <textarea class="form-control border-0 form-color" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <textarea class="form-control border-0 form-color" id="recruiter-about-input" rows="15"></textarea>
         </div>
         <div class="btn d-flex align-items-center justify-content-center my-5">
-            <a href="#" role="button"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary mb-5 w-25 me-5">Save</a>
+            <button role="button"data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-primary mb-5 btn-up-save me-5" id="save">Save</button>
                 <!-- Modal -->
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog  modal-dialog-centered">
                     <div class="modal-content border-0">
                         <div class="modal-body container">
                             <div class="container my-5">
-                                <div class="card text-center mod-cardd mx-auto" style="border: 1px solid #3AB418;">
-                                    <div class="card-body border-bottom" style="background-color: #3AB418;">
+                                <div class="card text-center mod-cardd mx-auto" style="border: 1px solid rgba(39, 118, 234, 1);">
+                                    <div class="card-body border-bottom" style="background-color: rgba(39, 118, 234, 1);">
                                         <h2 class="card-title text-white">Great!</h2>
                                     </div>
                                     <div class="image h-100">
@@ -118,8 +129,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container btn-mod w-50 mx-auto">
-                                <a href="profile-page.html" role="button" class="btn btn-secondary border-0 mb-3" style="background-color: #3AB418;">Close</a>
+                            <div class="container btn-mod mx-auto">
+                                <a href="profile-page.html" role="button" class="btn btn-secondary border-0 mb-3" style="background-color: rgba(39, 118, 234, 1);">Close</a>
                             </div>
                         </div>
                     </div>
@@ -138,9 +149,6 @@
                             <ul class="list-unstyled fw-bold">
                                 <li class="mb-4">
                                     <a class="text-decoration-none link-secondary" href="home.html">Home</a>
-                                </li>
-                                <li class="mb-4">
-                                    <a class="text-decoration-none link-secondary" href="profile-page.html">Profile</a>
                                 </li>
                                 <li class="mb-4">
                                     <a class="text-decoration-none link-secondary" href="about-us-logged-in.html">About Us</a>
@@ -167,7 +175,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-12">
-                    <p class="fw-bold text-light">CONTACT US</p>
+                    <div class="mb-3">
+                        <a href="contact-page-logged.html" class="fw-bold text-decoration-none link-light">CONTACT US</a>
+                    </div>
                     <ul class="list-unstyled fs-14">
                         <li>
                             <div class="d-flex text-secondary">
@@ -199,6 +209,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/update-page.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

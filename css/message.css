@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
 padding: 0 ;
 margin: 0 ;
@@ -24,6 +25,15 @@ font-family: "Inter", sans-serif !important;
   font-size: 14px;
 }
 
+.blue {
+  color: rgba(39, 118, 234, 1);
+}
+
+.blue:hover {
+  color: #fff;
+  background-color: rgba(39, 118, 234, 0.8);
+}
+
 .rounded-top{
 border-top-left-radius: 5px !important;
 border-top-right-radius: 5px !important;
@@ -45,7 +55,7 @@ height: 50px;
 }
 
 .messenger{
-  max-width: 200px; 
+  width: 200px; 
 }
 
 .active-message{
@@ -98,6 +108,7 @@ font-weight: 500 !important;
 
 
 @media (max-width: 992px) {
+
   .mobile-header {
       display: block;
   }
@@ -126,6 +137,7 @@ font-weight: 500 !important;
 @media (max-width: 426px){
   .container{
     margin-top: 0!important;
+    width: 100% !important;
   }
   .chat{
     /* position: absolute; */
@@ -155,7 +167,7 @@ font-weight: 500 !important;
     width: 12px;
   }
 
-  .yes{
+  .time-mark p{
     font-size: 9px !important;
   }
 
@@ -245,7 +257,19 @@ font-weight: 500 !important;
     display: flex !important;
   }
 
+  .messages-header{
+    display: none !important;
+  }
+
   
+}
+
+@media (max-width: 326px){
+  .avatar{
+    margin-right: 10px !important;
+
+  }
+
 }
 
 
