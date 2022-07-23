@@ -15,7 +15,7 @@ window.localStorage.setItem("recruiterLocation", recruiterLocation);
 window.localStorage.setItem("recruiterAbout", recruiterAbout);
 
 
-if (document.referrer === "https://meritdike.github.io/kodecamp-get-talent-project/updated-pp.html") {
+if (document.referrer === "https://babydeee.github.io/Kodecamp-get-talent-team-project/updated-pp.html") {
     renderProfileUpdate();
 }
 
